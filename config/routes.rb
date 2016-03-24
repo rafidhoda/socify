@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :events, except: [:edit, :update]
+  resources :photo_albums
 
   authenticated :user do
     root to: 'home#index', as: 'home'
