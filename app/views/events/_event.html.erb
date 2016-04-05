@@ -21,10 +21,10 @@
     <div class="event-details">
       <span class="text"><%= event.name %></span>
       <div class="calendar">
-        <%= fa_icon 'calendar-o' %> <%= formatted_time(event.when) %>
+        <i class="icon-calendar-empty"></i> <%= formatted_time(event.when) %>
       </div>
       <div class="location">
-        <%= fa_icon 'map-marker' %> <%= event.where || 'Unknown' %>
+        <i class="icon-location-1"></i> <%= event.where || 'Unknown' %>
       </div>
     </div>
   </div>
