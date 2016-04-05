@@ -16,7 +16,7 @@
 //= require bindWithDelay
 //= require jquery.datetimepicker
 //= require dropzone
-//= require alertify.min
+//= require alertify
 //= require_tree .
 
 $(document).ready(function(){
