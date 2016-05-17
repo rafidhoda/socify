@@ -17,6 +17,7 @@
 //= require jquery.datetimepicker
 //= require dropzone
 //= require alertify
+//= require lightbox.min
 //= require_tree .
 
 $(document).ready(function(){

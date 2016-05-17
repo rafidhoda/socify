@@ -11,7 +11,6 @@
  * file per style scope.
  *
  */
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
@@ -19,5 +18,6 @@
 @import "jquery.datetimepicker";
 @import "dropzone/dropzone";
 @import "alertify";
+@import "lightbox.min";
 @import "shared/*";
 @import "*";
