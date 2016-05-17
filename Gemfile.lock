@@ -82,8 +82,6 @@ GEM
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.9)
-    font-awesome-rails (4.3.0.0)
-      railties (>= 3.2, < 5.0)
     formatador (0.2.5)
     friendly_id (5.0.5)
       activerecord (>= 4.0.0)
@@ -268,7 +266,6 @@ DEPENDENCIES
   devise
   dropzonejs-rails
   faker
-  font-awesome-rails
   friendly_id (~> 5.0.0)
   guard
   guard-rspec (~> 4.2.8)
