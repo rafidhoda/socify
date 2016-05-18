@@ -31,10 +31,6 @@ class UsersController < ApplicationController
     @followers = @user.user_followers.paginate(page: params[:page])
   end
 
-  def photo_albums
-    @photo_albums = @user.photo_albums.paginate(page: params[:page])
-  end
-
   def set_password
     @user.password = params[:password]
     @user.password_confirmation = params[:password_confirmation]
