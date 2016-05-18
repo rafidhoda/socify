@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get :deactivate
       get :complete_profile
       post :set_password
+      get :photo_albums
     end
   end
 
