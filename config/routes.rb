@@ -10,9 +10,11 @@ Rails.application.routes.draw do
       get :complete_profile
       post :set_password
     end
+    resources :photo_albums
   end
 
   resources :events, except: [:edit, :update]
+  resources :photos, only: [:create, :destroy]
 
   authenticated :user do
     root to: 'home#index', as: 'home'
@@ -27,6 +29,8 @@ Rails.application.routes.draw do
   post :unlike, to: 'likes#destroy', as: :unlike
   get :find_friends, to: 'home#find_friends', as: :find_friends
   get :about, to: 'home#about', as: :about
+  post :update_photo, to: 'photos#update', as: :update_photo
+  post :update_photo_album, to: 'photo_albums#update', as: :update_photo_album
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

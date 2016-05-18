@@ -8,7 +8,12 @@ body {
   font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Raleway', sans-serif;
 }
 
@@ -16,7 +21,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
 
-.avatar, .avatar-sm {
+.avatar,
+.avatar-sm {
   border-radius: 10rem;
 }
 
@@ -41,10 +47,10 @@ h1, h2, h3, h4, h5, h6 {
 .well {
   background-color: rgba(255, 255, 255, 0.75);
   padding: 25px;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid $border-color;
+  box-shadow: none;
 }
-
 
 .name {
   a {
@@ -53,7 +59,9 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     color: $default-text-color;
     font-weight: bold;
-    &:hover, &:active {
+
+    &:active,
+    &:hover {
       color: $link-hover-color;
     }
   }
@@ -65,12 +73,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn {
-  padding: 7px 20px;
+  padding: 7px 17px;
 }
 
 .btn-primary {
   background-color: $navbar-color;
-  &:hover, &:active {
+
+  &:active,
+  &:hover {
     background: #0E6AC7;
   }
 }
@@ -79,7 +89,9 @@ h1, h2, h3, h4, h5, h6 {
   background-color: white;
   border: 1px solid $default-color;
   color: $default-color;
-  &:hover, &:active {
+
+  &:active,
+  &:hover {
     background: $default-color;
     color: white;
   }
@@ -91,33 +103,43 @@ h1, h2, h3, h4, h5, h6 {
 
 #btn-facebook {
   background-color: $facebook-color;
-  &:hover, &:focus, &:active {
+
+  &:active,
+  &:focus,
+  &:hover {
     background: darken($facebook-color, 5%);
   }
 }
 
 #btn-google {
   background-color: $google-color;
-  &:hover, &:focus, &:active {
+
+  &:active,
+  &:focus,
+  &:hover {
     background: darken($google-color, 5%);
   }
 }
 
 .btn-social {
   color: white;
-  &:hover, &:focus, &:active {
+
+  &:active,
+  &:focus,
+  &:hover {
     color: white;
   }
 }
 
-input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="text"],
 textarea {
   height: auto;
   padding: 10px 17px;
   box-shadow: none !important;
   border: 1px solid #ccc !important;
+
   &:focus {
     border: 1px solid #888 !important;
   };
@@ -135,28 +157,29 @@ textarea {
   padding: 5px 25px;
 }
 
-#gallery {
-  background-color: rgba(255, 255, 255, 0.75);
-  border: 1px solid $border-color;
-  padding: 10px;
-  h4 {
-    font-family: $default-font;
-    font-size: $default-font-size;
-    font-weight: bold;
-  }
-}
-
-#links {
-  a {
-    padding: 12px;
-  }
-  i {
-    font-size: $default-font-size;
-    margin-right: 15px;
-  }
-}
-
-.commentable, .likeable {
+.commentable,
+.likeable {
   @extend .well;
   margin-top: 20px;
+}
+
+.underlined {
+  text-align: center;
+}
+
+.underlined:after {
+  content: '';
+  background: rgba(0,0,0,0.25);
+  height: 1px;
+  width: 25px;
+  display: block;
+  margin: 10px auto 15px;
+}
+
+.modal-header {
+  border-bottom: none;
+
+  button {
+    cursor: pointer;
+  }
 }

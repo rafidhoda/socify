@@ -1,0 +1,6 @@
+<% if @photo_album.persisted? %>
+  window.location.href = "<%= user_photo_album_path(current_user, @photo_album) %>";
+  alertify.success("Created photo album");
+<% else %>
+  alertify.error("<%= @photo_album.errors.full_messages.first %>");
+<% end %>

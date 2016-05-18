@@ -5,8 +5,11 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:complete_profile, :set_password]
   before_action :set_user
+  before_action :fetch_photos, only: :show
   before_action :check_ownership, only: [:edit, :update]
   respond_to :html, :js
+
+  include Shared::Photos
 
   def show
     @activities = PublicActivity::Activity.where(owner: @user).order(created_at: :desc).paginate(page: params[:page], per_page: 10)
@@ -43,7 +46,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :about, :avatar, :cover,
+    params.require(:user).permit(:first_name, :last_name, :bio, :avatar, :cover,
                                  :sex, :dob, :location, :phone_number)
   end
 
