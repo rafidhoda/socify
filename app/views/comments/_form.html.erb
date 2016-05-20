@@ -4,7 +4,7 @@
       <div class="col-xs-1">
         <%= render 'shared/avatar', user: current_user, klass: 'avatar-sm' %>
       </div>
-      <div class="col-xs-11">
+      <div class="col-xs-10 col-xs-offset-1">
         <%= text_area_tag :comment_text, nil, placeholder: 'Enter Comment', class: 'form-control', rows: 1 %>
       </div>
     </div>
