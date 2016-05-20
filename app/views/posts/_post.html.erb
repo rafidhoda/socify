@@ -4,11 +4,9 @@
       <%= render 'shared/avatar', user: post.user %>
       <h4 class="name"><%= link_to post.user.name, user_path(post.user) %></h4>
     </div>
-    <% if render_actions %>
-      <div class="actions">
-        <%= render 'posts/actions', remote: remote, post: post %>
-      </div>
-    <% end %>
+    <div class="actions">
+      <%= render 'posts/actions', remote: remote, post: post %>
+    </div>
   </div>
   <div class="row">
     <%= render 'shared/created_at', activity: post %>
@@ -23,16 +21,12 @@
       <% end %>
     </div>
   </div>
-  <% if render_actions %>
-    <div class="row">
-      <div class="like-and-comment">
-        <%= render 'shared/like_and_comment', resource: post %>
-      </div>
+  <div class="row">
+    <div class="like-and-comment">
+      <%= render 'shared/like_and_comment', resource: post %>
     </div>
-  <% end %>
-  <% if render_comments %>
-    <div class="row">
-      <%= render 'shared/comments_block', resource: post %>
-    </div>
-  <% end %>
+  </div>
+  <div class="row">
+    <%= render 'shared/comments_block', resource: post %>
+  </div>
 </div>
