@@ -27,6 +27,10 @@
     </div>
   </div>
   <div class="row">
-    <%= render 'shared/comments_block', resource: post %>
+    <% if defined? show_all %>
+      <%= render 'shared/comments_block', resource: post, show_all: true %>
+    <% else %>
+      <%= render 'shared/comments_block', resource: post %>
+    <% end %>
   </div>
 </div>
